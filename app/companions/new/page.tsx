@@ -1,7 +1,7 @@
 const NewCompanion = () => {
   return (
     <div>
-      
+      New
     </div>
   )
 }
