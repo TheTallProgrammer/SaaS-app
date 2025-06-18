@@ -2,6 +2,7 @@ import CompanionCard from '@/components/CompanionCard'
 import CompanionsList from '@/components/CompanionsList'
 import CTA from '@/components/CTA'
 import { Button } from '@/components/ui/button'
+import { recentSessions } from '@/constants'
 import React from 'react'
 
 const Page = () => {
@@ -29,14 +30,18 @@ const Page = () => {
           id="789"
           name="Verba the Vocabulary Builder"
           topic="Language"
-          subject="Englush Literature"
+          subject="English Literature"
           duration={30}
           color="#BDE7FF"
         />
       </section>
 
-      <section className="home-section">
-        <CompanionsList/>
+      <section className="home-section pb-4">
+        <CompanionsList
+          title="Recently Completed Sessions"
+          companions={recentSessions}
+          classNames="w-2/3 max-lg: w-full"
+        />
         <CTA/>
       </section>
     </main>
